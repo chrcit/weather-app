@@ -1,5 +1,9 @@
 # Weather App
+![Gif Showcasing demo of the application](public/demo.gif)
+
 A basic weather app that uses the OpenWeatherMap API to display the current weather in a given city.
+
+[Live Version](https://weather-app-cyan-zeta.vercel.app/)
 
 # Features
 - Forecast for Vienna in 3h intervals
