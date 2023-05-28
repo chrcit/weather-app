@@ -67,17 +67,16 @@ export const WeatherWidget = () => {
   const weather = activeData.weather.at(0);
   const wind = activeData.wind;
 
-  console.log(activeData.dt);
-
   return (
     <>
       <motion.article
         layout
-        className="w-full max-w-[900px] mx-auto pt-24 sm:py-10 pb-10 px-5 sm:px-8 md:py-10 md:px-20 touch-pan-x  bg-stone-50 overflow-hidden rounded-md shadow-md relative"
+        className="w-full max-w-[900px] mx-auto pt-24 sm:py-10 pb-10 px-5 sm:px-8 md:py-10 md:px-20  bg-stone-50 overflow-hidden rounded-md shadow-md relative"
         onPan={(e, info) => {
-          if (info.delta.x < 0) {
+          console.log(info);
+          if (info.delta.x < -5) {
             handleNext();
-          } else {
+          } else if (info.delta.x > 5) {
             handlePrev();
           }
         }}
