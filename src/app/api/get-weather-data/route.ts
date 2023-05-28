@@ -53,7 +53,7 @@ export type GetWeatherDataSearchParams = z.infer<typeof SearchParamsSchema>;
 
 export type WeatherDataResponse = z.infer<typeof WeatherDataResponseSchema>;
 
-export const WeatherDataResponseSchema = z.object({
+const WeatherDataResponseSchema = z.object({
   cod: z.string(),
   message: z.number(),
   cnt: z.number(),
